@@ -6,3 +6,30 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* margin, padding이 더 이상 box의 길이에 포함되지 않는다. */
+}
+
+body {
+    font-family: 'Noto Serif KR', serif; /* inheritance와 관련 있으므로 body에 넣는다. */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(126, 213, 111, 0.8),
+            rgba(40, 180, 133, 0.8)),
+    url(../img/bg.jpg); /* Hex to RGB Color Converter */
+    background-size: cover;
+    background-position: top; /* 설정 값을 기준으로 줄어들고 늘어난다. */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* 시계 방향 좌표, CSS Clip-Path Generator  */
+}
